@@ -13,9 +13,9 @@ class Solution(object):
         right=n
         while(True):
             mid=(left+right)//2
-            if isBadVersion(mid)==False and isBadVersion(mid+1)==True:  
+            if not isBadVersion(mid) and isBadVersion(mid+1):  
                 return mid+1  
-            elif isBadVersion(mid)==False and isBadVersion(mid+1)==False:  
+            elif not isBadVersion(mid) and not isBadVersion(mid+1):  
                 left=mid  
-            elif isBadVersion(mid)==True and isBadVersion(mid+1)==True:  
-                right=mid 
+            elif isBadVersion(mid) and isBadVersion(mid+1):  
+                right=mid  
