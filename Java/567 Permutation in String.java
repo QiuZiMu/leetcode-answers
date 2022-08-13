@@ -11,7 +11,7 @@ class Solution {
         }
         for(int c:count){
             if(c!=0){
-                diff++;
+                ++diff;
             }
         }
         if(diff==0) return true;
@@ -22,21 +22,22 @@ class Solution {
                 continue;
             }
             if(count[x]==0){
-                diff++;
+                ++diff;
             }
             --count[x];
             if(count[x]==0){
-                diff--;
+                --diff;
             }
             if(count[y]==0){
-                diff++;
+                ++diff;
             }
             ++count[y];
             if(count[y]==0){
-                diff--;
+                --diff;
             }
             if(diff==0) return true;
         }
+        
         return false;
     }
 }
